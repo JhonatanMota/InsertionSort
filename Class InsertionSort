@@ -1,0 +1,30 @@
+public static void insertionSort(int[] A)
+   { 
+      int i, j, index;
+      for (i = 1; i < A.length; i++)
+      {
+          index = A[i];
+          j = i;
+          while ((j > 0) && (A[j - 1] > index))
+          {
+              A[j] = A[j - 1];
+              j = j - 1;
+          }
+          A[j] = index;
+      }
+   }
+public static void main(String[] args) {
+        //insertion sort
+        int[] A =  new int [5];
+        ordernar(A);
+        for (int i=0;i<5;i++)
+        {
+            A[i]=Integer.parseInt(JOptionPane.showInputDialog("DIGITE UM NÚMERO: " + i));
+            System.out.println("NÚMERO DIGITADO: " + A[i]);
+        }
+        for(int i=0;i<A.length;i++)
+        {
+            System.out.println(A[i]);
+        }
+    }
+}
